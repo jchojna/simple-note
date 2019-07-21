@@ -66,10 +66,14 @@ body {
     font-size: 1.4rem;
     padding: 20px;
     min-height: 300px;
-
+    transition: background-color $time-effects, box-shadow $time-effects;
+    
     &:focus {
       border-width: 2px;
       background-color: $color-anthracite-darker;
+      box-shadow:
+      0 0 200px rgba($color: #000, $alpha: 0.1),
+      0 0 50px rgba($color: #000, $alpha: 0.1);
     }
   }
 
@@ -85,8 +89,18 @@ body {
     color: $color-beige;
     cursor: pointer;
     border-radius: 5px;
-    padding: 15px 40px;
+    min-height: 60px;
+    min-width: 150px;
     font-size: 1.5rem;
+    transition:
+      background-color $time-effects,
+      border $time-effects,
+      color $time-effects;
+
+    &:hover {
+      border: none;
+      background-color: $color-anthracite-darker;
+    }
 
     &--load {
       border: 1px solid $color-beige;
@@ -96,6 +110,10 @@ body {
       background-color: $color-beige;
       color: $color-anthracite;
       font-weight: bold;
+
+      &:hover {
+        color: $color-beige;
+      }
     }
   }
 }

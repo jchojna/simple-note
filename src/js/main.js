@@ -1,7 +1,5 @@
 "use strict";
 
-// service worker registration - remove if you're not going to use it
-
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
@@ -14,9 +12,22 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-// place your code below
+const noteMessage = document.querySelector('.note__message--js');
+const loadButton = document.querySelector('.note__button--js-load');
+const saveButton = document.querySelector('.note__button--js-save');
 
+const saveContent = (e) => {
+  e.preventDefault();
+  const message = noteMessage.value;
+  localStorage.setItem('noteMessage', message);
+}
 
-console.log(`Hello world!`);
+const loadContent = (e) => {
+  e.preventDefault();
+  localStorage.getItem('noteMessage')
+    ? noteMessage.value = localStorage.getItem('noteMessage')
+    : null;
+}
 
-
+loadButton.addEventListener('click', loadContent);
+saveButton.addEventListener('click', saveContent);
