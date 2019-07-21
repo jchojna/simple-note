@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
-    <meta name="description" content="Description" />
+    <title>Simple Note</title>
+    <meta name="description" content="Simple note is a plain text editor with local storage support" />
 
-    <link rel="manifest" href="manifest.json" />
+    <!-- <link rel="manifest" href="manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link
       rel="apple-touch-icon"
@@ -19,12 +19,31 @@
       rel="icon"
       type="image/png"
       href="assets/pwa/icons/icon-192x192.png"
-    />
+    /> -->
 
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <h1>Simple Note</h1>
+    <!-- MAIN CONTENT -->
+    <main class="note">
+      <header class="note__header">
+        <h1 class="note__heading">Simple Note</h1>
+      </header>
+      
+      <label for="note-message">Your message:</label>
+      
+      <textarea name="text" id="note-message" cols="30" rows="10" class="note__message"></textarea>
+
+      <div class="note__buttons">
+        <button class="note__load note__load--js">
+          Load
+        </button>
+        <button class="note__save note__save--js">
+          Save
+        </button>
+      </div>
+    </main>
+    <!-- END OF MAIN CONTENT -->
 
     <script src="js/main.js"></script>
   </body>
