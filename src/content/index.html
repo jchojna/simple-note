@@ -26,22 +26,26 @@
   <body>
     <!-- MAIN CONTENT -->
     <main class="note">
-      <header class="note__header">
-        <h1 class="note__heading">Simple Note</h1>
-      </header>
-      
-      <label for="note-message">Your message:</label>
-      
-      <textarea name="text" id="note-message" cols="30" rows="10" class="note__message"></textarea>
-
-      <div class="note__buttons">
-        <button class="note__load note__load--js">
-          Load
-        </button>
-        <button class="note__save note__save--js">
-          Save
-        </button>
-      </div>
+      <article class="note__container">
+        <header class="note__header">
+          <h1 class="note__heading">Simple Note</h1>
+        </header>
+  
+        <label for="note-message" class="note__label">
+          Your message:
+        </label>
+        
+        <textarea name="text" id="note-message" class="note__message" placeholder="Write your message here..."></textarea>
+  
+        <div class="note__buttons">
+          <button class="note__button note__button--load note__button--js-load">
+            Load
+          </button>
+          <button class="note__button note__button--save note__button--js-save">
+            Save
+          </button>
+        </div>
+      </article>
     </main>
     <!-- END OF MAIN CONTENT -->
 
