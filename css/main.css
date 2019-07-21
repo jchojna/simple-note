@@ -369,10 +369,17 @@ body {
     color: #FFF8D3;
     font-size: 1.4rem;
     padding: 20px;
-    min-height: 300px; }
+    min-height: 300px;
+    -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    transition: background-color 0.3s, -webkit-box-shadow 0.3s;
+    -o-transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s; }
     .note__message:focus {
       border-width: 2px;
-      background-color: #495252; }
+      background-color: #495252;
+      -webkit-box-shadow: 0 0 200px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.1);
+              box-shadow: 0 0 200px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.1); }
   .note__buttons {
     -ms-flex-item-align: stretch;
         align-self: stretch;
@@ -388,13 +395,22 @@ body {
     color: #FFF8D3;
     cursor: pointer;
     border-radius: 5px;
-    padding: 15px 40px;
-    font-size: 1.5rem; }
+    min-height: 60px;
+    min-width: 150px;
+    font-size: 1.5rem;
+    -webkit-transition: background-color 0.3s, border 0.3s, color 0.3s;
+    -o-transition: background-color 0.3s, border 0.3s, color 0.3s;
+    transition: background-color 0.3s, border 0.3s, color 0.3s; }
+    .note__button:hover {
+      border: none;
+      background-color: #495252; }
     .note__button--load {
       border: 1px solid #FFF8D3; }
     .note__button--save {
       background-color: #FFF8D3;
       color: #55605F;
       font-weight: bold; }
+      .note__button--save:hover {
+        color: #FFF8D3; }
 
 /*# sourceMappingURL=main.css.map */
