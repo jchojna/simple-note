@@ -2,3 +2,5 @@ node_modules
 dist
 other
 figma
+
+package-lock.json
